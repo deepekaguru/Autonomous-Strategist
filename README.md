@@ -1,9 +1,11 @@
-Autonomous Dealership Strategist
+**Autonomous Dealership Strategist**
 
 An Agentic AI framework that moves inventory management from passive tracking to autonomous strategy — analyzing market trends against live stock data and delivering actionable procurement recommendations to human decision-makers.
 
 Overview
+
 Traditional inventory tools are descriptive: they report what you have. This system is prescriptive: it determines what you need, explains why, and prepares the next action — while keeping a human in the loop for final approval.
+
 Built on a fully containerized stack using n8n, Gemini Pro, and PostgreSQL, the agent autonomously:
 
 Pulls internal dealership inventory from PostgreSQL
@@ -13,6 +15,7 @@ Dispatches a structured procurement recommendation directly to the dealership ma
 
 
 Architecture
+
 [ External Market Trends ]     [ PostgreSQL (Internal Stock) ]
             │                              │
             └──────────┬───────────────────┘
@@ -24,6 +27,7 @@ Architecture
                        │
                        ▼
           [ Manager Email — Recommendation ]
+
 Stack:
 
 Orchestration: n8n (Dockerized)
@@ -33,6 +37,7 @@ Deployment: Docker Compose
 
 
 Key Features
+
 Chain-of-Thought Reasoning
 The agent logs each step of its decision process before generating a recommendation — no black-box outputs.
 [AGENT LOG] Local stock check — Toyota Camry: 2 units
